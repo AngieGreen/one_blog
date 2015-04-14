@@ -16,7 +16,7 @@
             <!-- <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p> -->
 
             <!-- Preview Image -->
-            <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+            <%= link_to image_tag("http://placehold.it/900x300", alt: "Rails logo"), class="img-responsive" %>
 
             <!-- Post Content -->
             <p class="lead">I wrote my first line of computer code on January 26, 2015, as part of the Tech Talent South code school class. </p>
@@ -62,60 +62,11 @@
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
 
-            <!-- Side Widget Well -->
-            <div class="well">
-                <h4>The Rules</h4>
-                <p>One website, web app, or project each week from Monday morning to Sunday midnight.</p><br>
-                <p>All code open source and posted to Github.</p><br>
-                <p>At least one post here per project, sharing what I've learned.</p><br>
-                <p>No refactoring of the code after the project's week is over.</p>
-            </div>
+            <%= render 'layouts/siderules' %>
 
-            <!-- Blog Categories Well -->
-            <div class="well">
-                <h4>All 52 Projects</h4>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">One</a>
-                            </li>
-                            <li><a href="#">Three</a>
-                            </li>
-                            <li><a href="#">Five</a>
-                            </li>
-                            <li><a href="#">Seven</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Two</a>
-                            </li>
-                            <li><a href="#">Four</a>
-                            </li>
-                            <li><a href="#">Six</a>
-                            </li>
-                            <li><a href="#">Eight</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </div>
+            <%= render 'layouts/sidecategories' %>
 
-            <!-- Blog Search Well -->
-            <div class="well">
-                <h4>Search</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                    </span>
-                </div>
-                <!-- /.input-group -->
-            </div>
+            <%= render 'layouts/sidesearch' %>
 
         </div>
 
