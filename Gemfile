@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add Bootstrap
 gem 'bootstrap-sass'
 
+# Add Stamp gem for pretty dates
+gem 'stamp'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
