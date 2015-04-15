@@ -19,10 +19,4 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "About | 52 Apps Project by Angie Green"
   end
 
-  test "should get categories" do
-    get :categories
-    assert_response :success
-    assert_select "title", "All 52 Projects | 52 Apps Project by Angie Green"
-  end
-
 end
