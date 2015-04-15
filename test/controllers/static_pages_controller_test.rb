@@ -25,4 +25,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "Contact | 52 Apps Project by Angie Green"
   end
 
+  test "should get goals" do
+    get :goals
+    assert_response :success
+    assert_select "title", "The Goals | 52 Apps Project by Angie Green"
+  end
+
 end
