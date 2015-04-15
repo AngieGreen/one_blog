@@ -21,11 +21,11 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a,
@@ -203,7 +203,7 @@ section.success a:focus,
 section.success a:active,
 section.success a.active {
     outline: 0;
-    color: $gray;
+    color: $blush;
 }
 
 @media(max-width:767px) {
@@ -214,6 +214,10 @@ section.success a.active {
     section.first {
         padding-top: 75px;
     }
+}
+
+.portfolio-item {
+    padding-bottom: 15px;
 }
 
 #portfolio .portfolio-item {
