@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'categories'  => 'categories#new'
 
+  get 'posts' => 'posts#new'
+
   resources :categories
   resources :posts
   resources :comments
