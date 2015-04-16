@@ -24,8 +24,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add Bootstrap
 gem 'bootstrap-sass'
 
-# Add Stamp gem for pretty dates
-gem 'stamp'
+# Add BCrypt for secure passwords
+gem 'bcrypt'
+# Add Will Paginate
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+# Add PlaceGant for images
+gem 'placegant'
+# Add Font Awesome
+gem 'font-awesome-sass'
+# Add Image Helper gems
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+# Add contact form magic
+gem 'mail_form'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -57,4 +71,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'puma'
 end
