@@ -9,8 +9,6 @@ Rails.application.routes.draw do
 
   get 'goals' => 'static_pages#goals'
 
-  get 'signup'  => 'users#new'
-
   get 'categories'  => 'categories#new'
 
   get 'posts' => 'posts#new'
