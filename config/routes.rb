@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   get 'posts' => 'posts#new'
 
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
   resources :categories
   resources :posts
   resources :comments
