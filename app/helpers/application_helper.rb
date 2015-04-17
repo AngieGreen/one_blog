@@ -9,4 +9,7 @@ module ApplicationHelper
       "#{page_title} | #{base_title}"
     end
   end
+
+  # Helper for the placeGant images
+  include PlaceGant::Helpers
 end

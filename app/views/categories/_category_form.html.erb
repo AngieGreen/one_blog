@@ -1,0 +1,6 @@
+<%= form_for(@category) do |f| %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Add new category..." %>
+  </div>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

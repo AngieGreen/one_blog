@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def new
   end
 
- def create
+  def create
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Post created!"
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.find(params[:id])
+    @posts = Post.find(params[:id]).paginate(:page => params[:page])
   end
 
 private

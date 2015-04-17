@@ -1,2 +1,31 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<% provide(:title, @category.name) %>
+
+<!-- Page Content -->
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+          <section class="category_form">
+            <%= render 'category_form' %>
+          </section>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
