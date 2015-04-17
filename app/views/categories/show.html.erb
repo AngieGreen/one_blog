@@ -1,0 +1,9 @@
+<div class="col-md-8">
+  <% if @category.posts.any? %>
+    <h3><%= @category %></h3>
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+    <%= will_paginate @posts %>
+  <% end %>
+</div>
