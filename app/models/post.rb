@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
+  mount_uploader :photo, PhotoUploader
   validates :category_id, presence: true
   validates :content, presence: true
   validates :day, presence: true
