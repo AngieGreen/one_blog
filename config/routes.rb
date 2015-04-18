@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'goals' => 'static_pages#goals'
 
-  get 'categories'  => 'categories#show'
+  get 'categories'  => 'categories#new'
 
   get 'posts' => 'posts#new'
   post 'posts' => 'posts#create'
