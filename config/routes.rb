@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'categories'  => 'categories#show'
 
   get 'posts' => 'posts#new'
+  post 'posts' => 'posts#create'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
