@@ -1,6 +1,11 @@
 <%= form_for(@category) do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Add new category..." %>
+        <div class="row">
+      <%= f.text_area :name, placeholder: "What's the project name?'" %>
+    </div>
+    <div class="row">
+      <%= f.text_area :week, placeholder: "Week number?" %>
+    </div>
   </div>
   <%= f.submit "Add", class: "btn btn-primary" %>
 <% end %>

@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       flash[:success] = "Post created!"
       redirect_to root_url
     else
-      flash[:error] = "oops try again"
+      flash[:danger] = "oops try again"
       redirect_to posts_url
     end
   end
