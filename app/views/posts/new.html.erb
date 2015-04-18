@@ -1,3 +1,31 @@
 <% provide(:title, 'New Post') %>
-<h1>Post Entry</h1>
-<p>This will be a signup page for new posts.</p>
+
+<!-- Page Content -->
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+          <section class="post_form">
+            <%= render 'post_form' %>
+          </section>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
