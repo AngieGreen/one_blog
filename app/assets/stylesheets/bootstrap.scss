@@ -87,7 +87,7 @@ select,
 textarea {
   color: inherit;
   font: inherit;
-  margin: 0;
+  margin: 10px;
 }
 button {
   overflow: visible;
@@ -2228,8 +2228,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: $blush;
-  border-color: $blush;
+  background-color: $pink;
+  border-color: $pink;
 }
 .btn-primary:hover,
 .btn-primary:focus,
