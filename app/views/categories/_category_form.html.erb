@@ -1,10 +1,10 @@
 <%= form_for(@category) do |f| %>
   <div class="field">
         <div class="row">
-      <%= f.text_area :name, placeholder: "What's the project name?" %>
+      <%= f.text_area :name, placeholder: "What's the project name?", :size => "80%" %>
     </div>
     <div class="row">
-      <%= f.text_area :week, placeholder: "Week number?" %>
+      <%= f.text_area :week, placeholder: "Week number?", :size => "80%" %>
     </div>
   </div>
   <%= f.submit "Add", class: "btn btn-primary" %>
