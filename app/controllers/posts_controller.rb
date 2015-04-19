@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    @post = @category.posts.create(params[:post])
+    @post = @category.posts.create(post_params)
 
     respond_to do |format|
       if @post.save
@@ -76,5 +76,10 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+   private
+    def post_params
+      params.require(:post).permit(:title, :content, :day)
+    end
 
 end

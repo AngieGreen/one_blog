@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(params[:category])
+    @category = Category.new(category_params)
 
     respond_to do |format|
       if @category.save
@@ -76,5 +76,10 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def category_params
+      params.require(:category).permit(:name, :week, :minicontent)
+    end
 
 end
