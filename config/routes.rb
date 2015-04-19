@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   post 'categories' => 'categories#create'
   get 'categories/:id', to: 'categories#show'
 
-  get 'posts' => 'posts#new'
+  get 'new_posts' => 'posts#new'
+  get 'posts' => 'posts#show'
   post 'posts' => 'posts#create'
   get 'posts/:id', to: 'posts#show'
 

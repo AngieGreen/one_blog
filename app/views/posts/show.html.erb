@@ -1,5 +1,6 @@
                 <% @posts.each do |eachpost| %>
                 <% provide(:title, eachpost.title) %>
+                <% end %>
 
 <!-- Page Content -->
 
@@ -11,17 +12,16 @@
             <!-- Blog Post -->
 
             <!-- Title -->
-
-            <h1><%= eachpost.title %></h1>
-
-            <!-- Date/Time -->
-            <!-- <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p> -->
+            <% @posts.each do |eachpost| %>
+            <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
 
             <!-- Preview Image -->
 
             <!-- Post Content -->
-            <p class="lead">Day Number <%= eachpost.day %></p>
+
             <p><%= eachpost.content %></p>
+            <p>BUTTON HERE FOR MORE link_to</p>
+
             <% end %>
 
 <!--             <hr> -->

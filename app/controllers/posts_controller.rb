@@ -17,9 +17,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @posts = Post.find(params[:id]).paginate(:page => params[:page])
-        # This shows alphabetically by id
-    @posts = Post.order(:id)
+  @posts = Post.all
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @posts }
+    end
   end
 
 private
