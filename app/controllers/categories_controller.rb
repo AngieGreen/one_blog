@@ -9,13 +9,15 @@ class CategoriesController < ApplicationController
       flash[:success] = "Category created!"
       redirect_to root_url
     else
-      flash[:danger] = "oops try again"
+      flash[:danger] = "Oops try again!"
       redirect_to categories_url
     end
   end
 
   def show
-    @category = Category.find(params[:id])
+    # This shows alphabetically by id
+    @category = Category.order(:id)
+    @posts = Post.order(:id)
   end
 
 private
