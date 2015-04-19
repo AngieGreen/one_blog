@@ -14,328 +14,49 @@
 
     <!-- Projects Row One APPS 1 to 4-->
     <div class="row">
+        <% @categories.each do |category| %>
         <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
+                <%= link_to (image_tag placegant(750, 450)), category_path(category[:id]), class:"img-responsive" %>
         </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
+        <% end %>
     </div>
     <!-- /.row -->
 
     <!-- Projects Row Two APPS 5 to 8-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+
 
     <!-- Projects Row Three APPS 9 to 12-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Four APPS 13 to 16-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Five APPS 17 to 20-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- Projects Row Four APPS 13 to 16-->
 
-        <!-- Projects Row Six APPS 21 to 24-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Seven APPS 25 to 28-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- Projects Row Five APPS 17 to 20-->
 
-        <!-- Projects Row Eight APPS 29 to 32-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Nine APPS 33 to 36-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- Projects Row Six APPS 21 to 24-->
 
-        <!-- Projects Row Ten APPS 37 to 40-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Eleven APPS 41 to 44-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- Projects Row Seven APPS 25 to 28-->
 
-        <!-- Projects Row Twelve APPS 45 to 48-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
 
-        <!-- Projects Row Thirteen APPS 49 to 52-->
-    <div class="row">
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#">
-                <%= image_tag placegant(750, 450), class:"img-responsive" %>
-            </a>
-        </div>
-    </div>
-    <!-- /.row -->
+    <!-- Projects Row Eight APPS 29 to 32-->
+
+
+    <!-- Projects Row Nine APPS 33 to 36-->
+
+
+    <!-- Projects Row Ten APPS 37 to 40-->
+
+
+    <!-- Projects Row Eleven APPS 41 to 44-->
+
+
+    <!-- Projects Row Twelve APPS 45 to 48-->
+
+
+    <!-- Projects Row Thirteen APPS 49 to 52-->
+
 
 </div>
 
