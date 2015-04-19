@@ -3,6 +3,11 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @posts }
+    end
   end
 
   def create

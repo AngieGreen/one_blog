@@ -1,6 +1,11 @@
 class CategoriesController < ApplicationController
   def new
     @category = Category.new
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @category }
+    end
   end
 
   def create
