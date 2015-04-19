@@ -23,16 +23,17 @@ class PostsController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @post = @category.posts.create(post_params)
+    @posts = @category.posts.find(params[:id])
 
     respond_to do |format|
       if @post.save
-        format.html  { redirect_to(@post,
+        format.html  { redirect_to(post_path,
                       :notice => 'Post was successfully created.') }
-        format.json  { render :json => @post,
-                      :status => :created, :location => @post }
+        format.json  { render :json => @posts,
+                      :status => :created, :location => @posts }
       else
         format.html  { render :action => "new" }
-        format.json  { render :json => @post.errors,
+        format.json  { render :json => @posts.errors,
                       :status => :unprocessable_entity }
       end
     end
