@@ -13,16 +13,22 @@
             <!-- Preview Image -->
 
             <!-- category Content -->
-
             <p><%= @category.minicontent %></p>
 
+            <%= link_to 'New Post', root_path %>
+            <p>FIX THIS SO IT LINKS TO THE id="new post"</p>
+
                 <hr>
-                <p>FIX SO THAT IT SHOWS APPROPRIATE DAYS FOR EACH PROJECT</p>
                 <% @category.posts.each do |eachpost| %>
                 <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
                 <p><%= eachpost.content %></p>
                 <% end %>
 
+                <!-- Add new post Form -->
+                    <div id="new post" class="well">
+                        <h4>Enter New Post</h4>
+                            <%= render 'post_form' %>
+                    </div>
 
         </div>
 

@@ -16,9 +16,36 @@
 
             <p><%= @post.content %></p>
 
+            <!-- Blog Comments -->
+            <h2>Comments</h2>
+                <% @post.comments.each do |comment| %>
+                  <p>By: <%= comment.commenter %></p>
+                  <p><%= comment.body %></p>
+                  <p class="small"><%= link_to 'Delete Comment', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
+</p>
+                <% end %>
+
+            <!-- Comments Form -->
+            <div class="well">
+                <h4>What do you think?</h4>
+                    <div class="form-group">
+                        <%= form_for([@post, @post.comments.build]) do |f| %>
+                          <div class="field">
+                            <%= f.text_field :commenter, placeholder: "Your name" %>
+                            <br><br>
+                          </div>
+                          <div class="field">
+                            <%= f.text_area :body, placeholder: "Your comment...", size: "80%" %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit "Submit", class:"btn btn-primary" %>
+                          </div>
+                        <% end %>
+                    </div>
+            </div>
+
             <%= link_to 'Edit', edit_post_path(@post) %>
             <%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
-
 
         </div>
 
