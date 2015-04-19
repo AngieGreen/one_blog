@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get 'goals' => 'static_pages#goals'
 
-  get 'categories'  => 'categories#new'
+  get 'new_categories' => 'categories#new'
+  get 'categories'  => 'categories#show'
   post 'categories' => 'categories#create'
   get 'categories/:id', to: 'categories#show'
 

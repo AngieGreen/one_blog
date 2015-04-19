@@ -15,9 +15,12 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    # This shows alphabetically by id
-    @category = Category.order(:id)
-    @posts = Post.order(:id)
+  @categories = Category.all
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @categories }
+    end
   end
 
 private
