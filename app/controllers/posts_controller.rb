@@ -17,7 +17,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.find(params[:id]).paginate(:page => params[:page])
+    # @posts = Post.find(params[:id]).paginate(:page => params[:page])
+        # This shows alphabetically by id
+    @posts = Post.order(:id)
   end
 
 private

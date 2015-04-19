@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'posts' => 'posts#new'
   post 'posts' => 'posts#create'
+  get 'posts/:id', to: 'posts#show'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

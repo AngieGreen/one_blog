@@ -2227,8 +2227,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: $pink;
-  border-color: $pink;
+  background-color: $blush;
+  border-color: $blush;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2237,7 +2237,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: $blush;
+  background-color: $gray;
   border-color: $gray;
 }
 .btn-primary:active,
@@ -2263,8 +2263,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: $pink;
-  border-color: $pink;
+  background-color: $blush;
+  border-color: $blush;
 }
 .btn-primary .badge {
   color: $pink;
