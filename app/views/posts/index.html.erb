@@ -1,4 +1,8 @@
-<% provide(:title, @post.title) %>
+                <% @posts.each do |eachpost| %>
+                <% provide(:title, eachpost.title) %>
+                <% end %>
+
+<!-- Page Content -->
 
     <div class="row">
 
@@ -8,17 +12,17 @@
             <!-- Blog Post -->
 
             <!-- Title -->
-            <h1><%= @post.title %><span class="small">Day Number <%= @post.day %></span></h1>
+            <% @posts.each do |eachpost| %>
+            <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
 
             <!-- Preview Image -->
 
             <!-- Post Content -->
 
-            <p><%= @post.content %></p>
+            <p><%= eachpost.content %></p>
+            <p>BUTTON HERE FOR MORE link_to</p>
 
-            <%= link_to 'Edit', edit_post_path(@post) %>
-            <%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
-
+            <% end %>
 
         </div>
 

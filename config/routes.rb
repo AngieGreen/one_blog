@@ -2,22 +2,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'rules' => 'static_pages#rules'
-
   get 'about' => 'static_pages#about'
-
-  get 'contact' => 'static_pages#contact'
-
   get 'goals' => 'static_pages#goals'
-
-  get 'new_categories' => 'categories#new'
-  get 'categories'  => 'categories#show'
-  post 'categories' => 'categories#create'
-  get 'categories/:id', to: 'categories#show'
-
-  get 'new_posts' => 'posts#new'
-  get 'posts' => 'posts#show'
-  post 'posts' => 'posts#create'
-  get 'posts/:id', to: 'posts#show'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

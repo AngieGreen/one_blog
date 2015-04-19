@@ -1,22 +1,40 @@
-<% provide(:title, @categories.name) %>
+<% provide(:title, @category.name) %>
 
-    <!-- Page Content -->
+    <div class="row">
 
-        <div class="row">
+        <!-- Blog category Content Column -->
+        <div class="col-lg-8">
 
-        <!-- Projects by Category-->
-            <% @categories.each do |eachproject| %>
-            <div class="col-md-7">
-                <ol>
-                    <h1>IMAGE GOES HERE</h1>
-            </div>
-            <div class="col-md-5">
-                    <h3><%= eachproject.name %></h3>
-                    <p><%= eachproject.week %>
-                    <p><%= eachproject.minicontent %></p>
-                    <span class="btn btn-primary"><%= link_to "More", posts_path %></span>
-                </ol>
-            </div>
-            <% end %>
+            <!-- Blog category -->
+
+            <!-- Title -->
+            <h1><%= @category.name %><span class="small">Week Number <%= @category.week %></span></h1>
+
+            <!-- Preview Image -->
+
+            <!-- category Content -->
+
+            <p><%= @category.minicontent %></p>
+
+                <hr>
+                <p>SOMETHING HERE TO MAKE EVERY POST IN THAT CATEGORY SHOW UP</p>
+
+
         </div>
-        <!-- /.row -->
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
