@@ -1,15 +1,17 @@
-<%= form_for([@category, @category.posts.build]) do |f| %>
-  <div class="field">
-    <div class="row">
+<div class="form-group">
+  <%= form_for([@category, @category.posts.build]) do |f| %>
+    <div class="field">
       <%= f.text_area :day, placeholder: "What day is it?", :size => "80%" %>
-    </div>
-    <div class="row">
+        <br><br>
       <%= f.text_area :title, placeholder: "Title here...", :size => "80%" %>
-    </div>
-    <div class="row">
+        <br><br>
       <%= f.text_area :content, placeholder: "Add the content...", :size => "80%" %>
+
+      <%= hidden_field_tag :user_id %>
     </div>
-    <%= hidden_field_tag :user_id %>
-  </div>
-  <%= f.submit "Add", class: "btn btn-primary" %>
-<% end %>
+
+    <div class="actions">
+    <%= f.submit "Add", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
