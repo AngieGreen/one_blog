@@ -3,9 +3,9 @@
     <h4>All 52 Projects</h4>
     <div class="row">
         <div class="col-lg-6">
-            <% @categories.each do |category| %>
+            <% @categories.each  do |category| %>
             <ul class="list-unstyled">
-                <li><%= link_to category.name, category_path(category[:id]) %>
+                <li><%= link_to category.name, category_path(category[:id]) -%>
                 </li>
             </ul>
             <% end %>
@@ -13,7 +13,7 @@
         <div class="col-lg-6">
             <% @categories.each do |category| %>
             <ul class="list-unstyled">
-                <li><%= link_to category.name, category_path(category[:id]) %>
+                <li><%= link_to category.name, category_path(category[:id]) -%>
                 </li>
             </ul>
             <% end %>
@@ -21,4 +21,3 @@
     </div>
     <!-- /.row -->
 </div>
-

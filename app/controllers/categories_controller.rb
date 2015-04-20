@@ -40,6 +40,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @post = Post.find(params[:id])
+    @categories = Category.all
 
     respond_to do |format|
       format.html  # show.html.erb

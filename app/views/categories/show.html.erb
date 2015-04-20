@@ -12,8 +12,7 @@
             <!-- category Content -->
             <p><%= @category.minicontent %></p>
 
-            <%= link_to 'New Post', root_path %>
-            <p>FIX THIS SO IT LINKS TO THE id="new post"</p>
+            <%= link_to 'New Post', category_path, id:"new post" %>
 
 <hr>
                 <% @category.posts.each do |eachpost| %>
