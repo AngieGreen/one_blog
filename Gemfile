@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -36,11 +36,6 @@ gem 'font-awesome-sass'
 # Add Image Helper gems
 gem 'carrierwave'
 gem 'fog'
-# Add contact form magic
-gem 'mail_form'
-gem 'simple_form'
-# Add devise
-gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -72,5 +67,4 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma'
 end
