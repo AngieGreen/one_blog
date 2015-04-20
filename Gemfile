@@ -36,6 +36,11 @@ gem 'font-awesome-sass'
 # Add Image Helper gems
 gem 'carrierwave'
 gem 'fog'
+# Add contact form magic
+gem 'mail_form'
+gem 'simple_form'
+# Add devise
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
