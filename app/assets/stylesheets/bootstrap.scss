@@ -244,7 +244,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: $blush;
+  color: $gray;
   text-decoration: none;
 }
 a:focus {
@@ -491,38 +491,38 @@ a.text-primary:hover {
   color: #ffffff;
 }
 a.text-success:hover {
-  color: #e6e6e6;
+  color: $gray;
 }
 .text-info {
   color: #ffffff;
 }
 a.text-info:hover {
-  color: #e6e6e6;
+  color: $gray;
 }
 .text-warning {
   color: #ffffff;
 }
 a.text-warning:hover {
-  color: #e6e6e6;
+  color: $gray;
 }
 .text-danger {
   color: #ffffff;
 }
 a.text-danger:hover {
-  color: #e6e6e6;
+  color: $gray;
 }
 .bg-primary {
   color: #fff;
   background-color: $pink;
 }
 a.bg-primary:hover {
-  background-color: $blush;
+  background-color: $gray;
 }
 .bg-success {
   background-color: $blush;
 }
 a.bg-success:hover {
-  background-color: $blush;
+  background-color: $gray;
 }
 .bg-info {
   background-color: $pink;
@@ -1457,7 +1457,7 @@ th {
   background-color: #f9f9f9;
 }
 .table-hover > tbody > tr:hover {
-  background-color: $blush;
+  background-color: $gray;
 }
 table col[class*="col-"] {
   position: static;
@@ -1510,7 +1510,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: $blush;
+  background-color: $gray;
 }
 .table > thead > tr > td.info,
 .table > tbody > tr > td.info,
@@ -1531,7 +1531,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: $blush;
+  background-color: $gray;
 }
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
@@ -1552,7 +1552,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-  background-color: $blush;
+  background-color: $gray;
 }
 .table > thead > tr > td.danger,
 .table > tbody > tr > td.danger,
@@ -1573,7 +1573,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: $blush;
+  background-color: $gray;
 }
 .table-responsive {
   overflow-x: auto;
@@ -2474,7 +2474,6 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: $pink;
-  text-decoration: underline;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,

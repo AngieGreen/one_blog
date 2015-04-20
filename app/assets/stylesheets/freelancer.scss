@@ -203,7 +203,7 @@ section.success a:focus,
 section.success a:active,
 section.success a.active {
     outline: 0;
-    color: $blush;
+    color: $gray;
 }
 
 @media(max-width:767px) {
@@ -363,6 +363,9 @@ footer .footer-above {
     padding-top: 30px;
     background-color: $gray;
     margin-top: 20px;
+    a:hover {
+        color: $blush;
+    }
 }
 
 footer .footer-col {
@@ -372,6 +375,9 @@ footer .footer-col {
 footer .footer-below {
     padding: 25px 0;
     background-color: $gray;
+    a:hover {
+        color: $blush;
+    }
 }
 
 .btn-social {
