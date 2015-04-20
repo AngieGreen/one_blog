@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Add Bootstrap
 gem 'bootstrap-sass'
+# Add Figaro
+gem 'figaro'
 
 # Add BCrypt for secure passwords
 gem 'bcrypt'
