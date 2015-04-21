@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     skip_before_action :authorize, only: [:show, :index, :new, :create]
 
   def new
+    @categories = Category.all
   end
 
   def create
