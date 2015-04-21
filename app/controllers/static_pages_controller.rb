@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  skip_before_action :authorize, only: [:show, :index]
+
   def home
     @categories = Category.all
 
