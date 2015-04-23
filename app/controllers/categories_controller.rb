@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+    @categories = Category.all
 
     respond_to do |format|
       format.html  # index.html.erb
