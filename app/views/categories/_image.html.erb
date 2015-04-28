@@ -1,0 +1,9 @@
+<!-- to show images -->
+
+<%= form_for @category do |f| %>
+  <p>
+    <%= image_tag(@cateogry.image_url) if @category.image? %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </p>
+<% end %>
