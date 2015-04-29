@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150419175157) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.date     "day"
+    t.integer  "day"
     t.integer  "category_id"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150419175157) do
     t.string   "photo"
   end
 
+  add_index "posts", ["category_id", "created_at"], name: "index_posts_on_category_id_and_created_at"
   add_index "posts", ["category_id"], name: "index_posts_on_category_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
@@ -53,7 +54,5 @@ ActiveRecord::Schema.define(version: 20150419175157) do
     t.string   "password_digest"
     t.string   "remember_digest"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
