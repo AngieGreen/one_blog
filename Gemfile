@@ -35,10 +35,6 @@ gem 'bootstrap-will_paginate'
 gem 'placegant'
 # Add Font Awesome
 gem 'font-awesome-sass'
-# Add Image Helper gems
-gem 'carrierwave'
-gem 'fog'
-gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
