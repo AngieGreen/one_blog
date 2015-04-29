@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  skip_before_action :authorize, only: [:show, :index, :create, :update, :new]
+  skip_before_action :authorize
 
   def create
     @post = Post.find(params[:post_id])
