@@ -14,7 +14,7 @@
             <div class="col-md-5">
                     <h2><%= link_to category.name, category_path(category[:id]) %></h2>
                     <h3>Week number <%= category.week %></h3>
-                    <p><%= truncate category.minicontent, length: 100 %></p>
+                    <p><%= category.minicontent %></p>
                     <span class="btn btn-primary"><%= link_to "More about this Project", category_path(category[:id]) %></span>
 
                 </ol>

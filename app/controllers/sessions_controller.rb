@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
 
-    skip_before_action :authorize, only: [:show, :index, :new, :create]
-
   def new
-    @categories = Category.all
   end
 
   def create
@@ -11,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       remember user
-      redirect_to new_category_path
+      redirect_to new_posts_path
     else
       flash.now[:danger] = 'Invalid email/password combination'
     end

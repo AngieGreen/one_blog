@@ -1,9 +1,0 @@
-<% provide(:title, 'Users') %>
-<h1>No new users</h1>
-<p>This is a private blog.</p>
-
-<% @users.each do |user| %>
-<%= user.name %>
-<% end %>
-
-<%= link_to 'private', new_user_path %>

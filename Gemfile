@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -23,8 +23,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Add Bootstrap
 gem 'bootstrap-sass'
-# Add Figaro
-gem 'figaro'
 
 # Add BCrypt for secure passwords
 gem 'bcrypt'
@@ -35,6 +33,14 @@ gem 'bootstrap-will_paginate'
 gem 'placegant'
 # Add Font Awesome
 gem 'font-awesome-sass'
+# Add Image Helper gems
+gem 'carrierwave'
+gem 'fog'
+# Add contact form magic
+gem 'mail_form'
+gem 'simple_form'
+# Add devise
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

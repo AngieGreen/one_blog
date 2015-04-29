@@ -19,8 +19,8 @@
 
             <!-- Post Content -->
 
-            <p><%= truncate eachpost.content, length: 150 %></p>
-            <span class="btn btn-primary"><%= link_to "More...", post_path(eachpost[:id]) %></span>
+            <p><%= eachpost.content %></p>
+            <p>BUTTON HERE FOR MORE link_to</p>
 
             <% end %>
             <%= will_paginate @posts %>

@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 
-  skip_before_action :authorize
+  skip_before_action :authorize, only: [:show, :index]
 
   def index
   @categories = Category.all
@@ -13,7 +13,6 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
-    @categories = Category.all
 
     respond_to do |format|
       format.html  # index.html.erb
@@ -41,7 +40,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @post = Post.find(params[:id])
-    @categories = Category.all
 
     respond_to do |format|
       format.html  # show.html.erb
