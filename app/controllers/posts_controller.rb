@@ -3,29 +3,17 @@ class PostsController < ApplicationController
   skip_before_action :authorize
 
   def index
-  @posts = Post.all.paginate(:page => params[:page], :per_page => 10)
-
-    respond_to do |format|
-      format.html  # index.html.erb
-      format.json  { render :json => @posts }
-    end
+    @posts = Post.all.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
     @category = Category.find(params[:category_id])
     @post = @category.posts.build
-
-    respond_to do |format|
-      format.html  # index.html.erb
-      format.json  { render :json => @posts }
-    end
   end
 
   def create
     @category = Category.find(params[:category_id])
-    @post = @category.posts.create(params[:comment])
-    @post.user_id = current_user.id
-    @post.save
+    @post = @category.posts.create(params[:post_params])
 
       if @post.save
         redirect_to posts_path
@@ -37,11 +25,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:post_id])
-
-    respond_to do |format|
-      format.html  # show.html.erb
-      format.json  { render :json => @post }
-    end
   end
 
   def edit
