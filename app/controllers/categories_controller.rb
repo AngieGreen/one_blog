@@ -23,24 +23,18 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    @categories = Category.all
 
-    respond_to do |format|
-      if @category.save
-        format.html  { redirect_to(@category,
-                      :notice => 'Project was successfully created.') }
-        format.json  { render :json => @category,
-                      :status => :created, :location => @category }
-      else
-        format.html  { render :action => "new" }
-        format.json  { render :json => @category.errors,
-                      :status => :unprocessable_entity }
-      end
+    if @category.save
+      redirect_to categories_path
+    else
+      redirect_to root_path
     end
   end
 
   def show
     @category = Category.find(params[:id])
-    @post = Post.find(params[:id])
+
     @categories = Category.all
 
     respond_to do |format|

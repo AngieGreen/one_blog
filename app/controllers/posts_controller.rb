@@ -12,7 +12,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @category = Category.find(params[:category_id])
+    @post = @category.posts.build
 
     respond_to do |format|
       format.html  # index.html.erb
@@ -22,7 +23,10 @@ class PostsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    @post = @category.posts.create(post_params)
+    @post = @category.posts.create(params[:comment])
+    @post.user_id = current_user.id
+    @post.save
+
       if @post.save
         redirect_to posts_path
       else
@@ -32,7 +36,7 @@ class PostsController < ApplicationController
 
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
 
     respond_to do |format|
       format.html  # show.html.erb

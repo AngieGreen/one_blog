@@ -12,13 +12,12 @@
             <!-- category Content -->
             <p><%= @category.minicontent %></p>
 
-            <%= link_to 'New Post', root_path %>
-            <p>FIX THIS SO IT LINKS TO THE id="new post"</p>
+            <%= link_to 'New Post', category_path(anchor: "new post") %>
 
 <hr>
                 <% @category.posts.each do |eachpost| %>
-                <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
-                <p><%= eachpost.content %></p>
+                    <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
+                    <p><%= eachpost.content %></p>
                 <% end %>
 <hr>
                 <!-- Add new post Form -->

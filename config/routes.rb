@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :categories do
-    resources :posts, only: [:new, :create]
+    resources :posts, only: [:new, :create, :show]
   end
 
   resources :posts, except: [:new, :create] do
