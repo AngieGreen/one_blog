@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
   default_scope -> { order(created_at: :desc) }
   mount_uploader :photo, PhotoUploader
+  validates :user_id, presence: true
   validates :content, presence: true
   validates :day, presence: true
   validates :title, presence: true
