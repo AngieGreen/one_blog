@@ -1,0 +1,70 @@
+<% provide(:title, @post.title) %>
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <h1><%= @post.title %><span class="small">Day Number <%= @post.day %></span></h1>
+
+            <!-- Preview Image -->
+
+            <!-- Post Content -->
+
+            <p><%= raw(@post.content) %></p>
+<hr>
+            <!-- Blog Comments -->
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Comments</h4>
+                        <% @post.comments.each do |comment| %>
+                          <p><%= comment.commenter %> says...</p>
+                          <%= raw(comment.body) %>
+                          <p class="small"><%= link_to 'Delete Comment', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete %></p>
+                        <% end %>
+                </div>
+            </div>
+<hr>
+            <!-- Comments Form -->
+            <div class="well">
+                <h4>What do you think?</h4>
+                    <div class="form-group">
+                        <%= form_for([@post, @post.comments.build]) do |f| %>
+                          <div class="field">
+                            <%= f.text_field :commenter, placeholder: "Your name" %>
+                            <br><br>
+                          </div>
+                          <div class="field">
+                            <%= f.text_area :body, placeholder: "Your comment...", size: "80%" %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit "Submit", class:"btn btn-primary" %>
+                          </div>
+                        <% end %>
+                    </div>
+            </div>
+
+            <%= link_to 'Edit', edit_post_path(@post) %>
+            <%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+

@@ -1,0 +1,15 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <div class="row">
+      <%= f.text_area :day, placeholder: "What day is it?", :size => "80%" %>
+    </div>
+    <div class="row">
+      <%= f.text_area :title, placeholder: "Title here...", :size => "80%" %>
+    </div>
+    <div class="row">
+      <%= f.text_area :content, placeholder: "Add the content...", :size => "80%" %>
+    </div>
+    <%= hidden_field_tag :user_id %>
+  </div>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

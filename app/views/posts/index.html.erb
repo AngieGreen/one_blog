@@ -1,0 +1,43 @@
+<% provide(:title, 'All 52 Project Updates') %>
+
+<!-- Page Content -->
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Blog Post -->
+
+            <!-- Title -->
+            <% @posts.each do |eachpost| %>
+            <h1><%= link_to eachpost.title, post_path(eachpost[:id]) %><span class="small">Day Number <%= eachpost.day %></span></h1>
+
+            <!-- Preview Image -->
+
+            <!-- Post Content -->
+
+            <p><%= raw(eachpost.content) %></p>
+            <p>BUTTON HERE FOR MORE link_to</p>
+
+            <% end %>
+            <%= will_paginate @posts %>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+

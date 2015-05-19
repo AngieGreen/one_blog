@@ -1,0 +1,62 @@
+raw<% provide(:title, @category.name) %>
+
+    <div class="row">
+
+        <div class="col-lg-8">
+
+            <!-- Title -->
+            <h1><%= @category.name %><span class="small">Week Number <%= @category.week %></span></h1>
+
+            <!-- Preview Image -->
+
+            <!-- category Content -->
+            <p><%= raw(@category.minicontent) %></p>
+
+            <%= link_to 'New Post', category_path(anchor: "new post") %>
+
+<hr>
+                <% @category.posts.each do |eachpost| %>
+                    <h1><%= eachpost.title %><span class="small">Day Number <%= eachpost.day %></span></h1>
+                    <p><%= raw(eachpost.content) %></p>
+                <% end %>
+<hr>
+                <!-- Add new post Form -->
+                    <div id="new post" class="well">
+                        <h4>Enter New Post</h4>
+                            <div class="form-group">
+                              <%= form_for([@category, @category.posts.build]) do |f| %>
+                                <div class="field">
+                                  <%= f.text_area :day, placeholder: "What day is it?", :size => "80%" %>
+                                    <br><br>
+                                  <%= f.text_area :title, placeholder: "Title here...", :size => "80%" %>
+                                    <br><br>
+                                  <%= f.text_area :content, placeholder: "Add the content...", :size => "80%" %>
+
+                                  <%= hidden_field_tag :user_id[1] %>
+                                </div>
+
+                                <div class="actions">
+                                <%= f.submit "Add", class:"btn btn-primary" %>
+                                </div>
+                              <% end %>
+                            </div>
+                    </div>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/siderules' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/sidesearch' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+

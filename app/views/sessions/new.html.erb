@@ -1,0 +1,42 @@
+<% provide(:title, "Log in") %>
+
+<!-- Page Content -->
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Title -->
+            <h1>Hi, beautiful.</h1>
+
+            <!-- Post Content -->
+            <%= form_for(:session, url: login_path) do |f| %>
+
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>
+
+              <%= f.label :password %>
+              <%= f.password_field :password, class: 'form-control' %>
+
+              <%= f.submit "Log in", class: "btn btn-primary" %>
+            <% end %>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <%= render 'layouts/sidesearch' %>
+
+            <%= render 'layouts/sidegoals' %>
+
+            <%= render 'layouts/sidecategories' %>
+
+            <%= render 'layouts/siderules' %>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+

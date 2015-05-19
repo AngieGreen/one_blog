@@ -1,0 +1,62 @@
+<% provide(:title, "Home") %>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">All 52 Projects
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row One APPS 1 to 4-->
+    <div class="row">
+        <% @categories.each do |category| %>
+        <div class="col-md-3 portfolio-item">
+                <%= link_to (image_tag placegant(300, 150)), category_path(category[:id]), class:"img-responsive" %>
+        </div>
+        <% end %>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row Two APPS 5 to 8-->
+
+
+    <!-- Projects Row Three APPS 9 to 12-->
+
+
+    <!-- Projects Row Four APPS 13 to 16-->
+
+
+    <!-- Projects Row Five APPS 17 to 20-->
+
+
+    <!-- Projects Row Six APPS 21 to 24-->
+
+
+    <!-- Projects Row Seven APPS 25 to 28-->
+
+
+    <!-- Projects Row Eight APPS 29 to 32-->
+
+
+    <!-- Projects Row Nine APPS 33 to 36-->
+
+
+    <!-- Projects Row Ten APPS 37 to 40-->
+
+
+    <!-- Projects Row Eleven APPS 41 to 44-->
+
+
+    <!-- Projects Row Twelve APPS 45 to 48-->
+
+
+    <!-- Projects Row Thirteen APPS 49 to 52-->
+
+
+</div>
+

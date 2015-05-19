@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: arg2015
+  api_key: '555746532728617'
+  api_secret: P82omBvCIkTBysn79ZP2mVunRw0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: arg2015
+  api_key: '555746532728617'
+  api_secret: P82omBvCIkTBysn79ZP2mVunRw0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: arg2015
+  api_key: '555746532728617'
+  api_secret: P82omBvCIkTBysn79ZP2mVunRw0
+  enhance_image_tag: true
+  static_image_support: false
